@@ -231,6 +231,10 @@ sup {
   clip: rect(0px 150px 600px 0px);
 }
 
+.can_faker {
+  display: none;
+}
+
 #banner {
   font-size: 20px;
   color: #333;
