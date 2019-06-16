@@ -29,9 +29,20 @@ function start() {
 
 	tl.add('mask', "+=.2");
 	tl.from(".txt", .5, { opacity: 0 }, 'mask');
-	tl.from('.top', .6, { opacity: 0, clip: 'rect(100px 300px 100px 0px)', ease: Back.easeOut }, 'mask');
-	tl.from('.right', .5, { clip: 'rect(0px 150px 600px 150px)', ease: Back.easeOut }, 'mask');
-	tl.from('.left', .7, { clip: 'rect(0px 150px 600px 150px)', ease: Back.easeOut }, 'mask');
+
+	tl.from('.top_1', 1, { opacity: 0, clip: 'rect(100px 300px 100px 0px)', ease: Power2.easeInOut }, 'mask');
+
+	tl.from('.right_1', 1.5, { clip: 'rect(0px 150px 600px 150px)', ease: Power2.easeOut }, 'mask');
+	tl.from('.right_2', 1.3, { clip: 'rect(0px 150px 600px 150px)', ease: Power3.easeInOut }, 'mask');
+	tl.from('.right_3', 1.5, { clip: 'rect(0px 150px 600px 150px)', ease: Back.easeOut }, 'mask');
+	tl.from('.right_4', 2.1, { clip: 'rect(0px 150px 600px 150px)', ease: Power4.easeInOut }, 'mask');
+
+	// tl.from('.right', .5, {clip:`rect(0px 150px 600px 150px)`, ease:Back.easeOut}, 'mask')
+
+	tl.from('.left_1', 1.4, { clip: 'rect(0px 150px 600px 150px)', ease: Back.easeOut }, 'mask');
+	tl.from('.left_2', .9, { clip: 'rect(0px 150px 600px 150px)', ease: Power2.easeInOut }, 'mask');
+	tl.from('.left_3', 1.2, { clip: 'rect(0px 150px 600px 150px)', ease: Power3.easeOut }, 'mask');
+	tl.from('.left_4', 1.3, { clip: 'rect(0px 150px 600px 150px)', ease: Power4.easeInOut }, 'mask');
 
 	tl.to(".can", .3, { scale: .82, yoyo: true, repeat: 1, ease: Back.easeOut }, 'mask-=.5');
 
