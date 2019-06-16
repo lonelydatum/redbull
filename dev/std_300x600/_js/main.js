@@ -34,20 +34,20 @@ function start(){
 	tl.from('.right_3', 1.5, {clip:`rect(0px 150px 600px 150px)`, ease:Back.easeOut}, 'mask')
 	tl.from('.right_4', 1.5, {clip:`rect(0px 150px 600px 150px)`, ease:Power2.easeInOut}, 'mask')
 
-	// tl.from('.right', .5, {clip:`rect(0px 150px 600px 150px)`, ease:Back.easeOut}, 'mask')
+	
 
 	tl.from('.left_1', 1.4, {clip:`rect(0px 150px 600px 150px)`, ease:Back.easeOut}, 'mask')
 	tl.from('.left_2', .9, {clip:`rect(0px 150px 600px 150px)`, ease:Power2.easeInOut}, 'mask')
 	tl.from('.left_3', 1.2, {clip:`rect(0px 150px 600px 150px)`, ease:Power3.easeOut}, 'mask')
 	tl.from('.left_4', 1.3, {clip:`rect(0px 150px 600px 150px)`, ease:Power4.easeInOut}, 'mask')
 
-	tl.to(".can", .3, {scale:.82, yoyo:true, repeat:1, ease:Back.easeOut}, 'mask-=.5')
+	tl.to(".can", .2, {scale:.82, yoyo:true, repeat:1, ease:Back.easeOut}, 'mask-=.5')
 
 
 	tl.to(".txt", .5, {opacity:0}, '+=2')
 	// TweenMax.to(".can", .3, {scale:.9, yoyo:true, repeat:1, ease:Power4.easeOut})
 
-	tl.to(".can", .3, {scale:.82, yoyo:true, repeat:1, ease:Power4.easeOut})
+	// tl.to(".can", .3, {scale:.82, yoyo:true, repeat:1, ease:Power4.easeOut})
 
 
 }
@@ -55,10 +55,9 @@ function start(){
 start()
 
 function frame3(){
-	// return
+	
 	TweenMax.set(".frame3", {opacity:1})
 	TweenMax.from(".txt2", .3, {opacity:0})
-
 	
 
 	flicker({
