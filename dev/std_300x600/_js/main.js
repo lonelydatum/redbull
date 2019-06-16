@@ -65,7 +65,7 @@ function frame3(){
 
 	flicker({
 		time: .2,
-		repeat: 10,
+		repeat: 25,
 		a: ".dots_a",
 		b: ".dots_b",
 	})
@@ -80,21 +80,21 @@ function frame3(){
 
 	flicker({
 		time: .4,
-		repeat: 10,
+		repeat: 12,
 		a: ".vert_a",
 		b: ".vert_b",
 	})
 
 	flicker({
 		time: .3,
-		repeat: 10,
+		repeat: 17,
 		a: ".hor_a",
 		b: ".hor_b",
 	})
 
 	flicker({
 		time: .4,
-		repeat: 10,
+		repeat: 12,
 		a: ".stuff_a",
 		b: ".stuff_b",
 	})
