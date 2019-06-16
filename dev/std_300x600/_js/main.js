@@ -32,7 +32,7 @@ function start(){
 	tl.from('.right_1', 1.5, {clip:`rect(0px 150px 600px 150px)`, ease:Power2.easeOut}, 'mask')
 	tl.from('.right_2', 1.3, {clip:`rect(0px 150px 600px 150px)`, ease:Power3.easeInOut}, 'mask')
 	tl.from('.right_3', 1.5, {clip:`rect(0px 150px 600px 150px)`, ease:Back.easeOut}, 'mask')
-	tl.from('.right_4', 2.1, {clip:`rect(0px 150px 600px 150px)`, ease:Power4.easeInOut}, 'mask')
+	tl.from('.right_4', 1.5, {clip:`rect(0px 150px 600px 150px)`, ease:Power2.easeInOut}, 'mask')
 
 	// tl.from('.right', .5, {clip:`rect(0px 150px 600px 150px)`, ease:Back.easeOut}, 'mask')
 
