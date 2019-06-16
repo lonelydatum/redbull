@@ -19,7 +19,8 @@ function flicker({time, repeat, a, b }) {
 }
 
 function start(){
-	const tl = new TimelineMax({onComplete: frame3})
+	const tl = new TimelineMax()
+	TweenMax.set(".txt2", {opacity:0})
 	tl.set(".frame1", {opacity:1})
 	tl.to(".logo", .3, {opacity:0}, "+=2")
 	tl.set(".frame2", {opacity:1})
@@ -42,9 +43,11 @@ function start(){
 	tl.from('.left_4', 1.3, {clip:`rect(0px 150px 600px 150px)`, ease:Power4.easeInOut}, 'mask')
 
 	tl.to(".can", .2, {scale:.82, yoyo:true, repeat:1, ease:Back.easeOut}, 'mask-=.5')
+	tl.call(frame3)
+	tl.to(".txt", .3, {opacity:0}, 8)
+	tl.to(".txt2", .3, {opacity:1})
 
-
-	tl.to(".txt", .5, {opacity:0}, '+=2')
+	// tl.to(".txt", .5, {opacity:0}, '+=2')
 	// TweenMax.to(".can", .3, {scale:.9, yoyo:true, repeat:1, ease:Power4.easeOut})
 
 	// tl.to(".can", .3, {scale:.82, yoyo:true, repeat:1, ease:Power4.easeOut})
@@ -57,7 +60,7 @@ start()
 function frame3(){
 	
 	TweenMax.set(".frame3", {opacity:1})
-	TweenMax.from(".txt2", .3, {opacity:0})
+	// TweenMax.from(".txt2", .3, {opacity:0})
 	
 
 	flicker({
