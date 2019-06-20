@@ -1,9 +1,16 @@
 
+function range(min, max){
+	const diff = max - min
+	const ran = Math.random() * diff
+	return ran + min
+}
+
 
 function flicker({time, repeat, a, b }) {
 	
 	const speed = .01;
 	const tl = new TimelineMax({repeat, repeatDelay:time})
+	const tl_move = new TimelineMax({repeat, repeatDelay:time})
 	tl.set([a, b], {opacity:0})
 	tl.to( a, speed, {opacity:1})
 
@@ -16,6 +23,27 @@ function flicker({time, repeat, a, b }) {
 	tl.to( a, speed, {opacity:1}, "out2")
 
 
+	tl_move.add("y")
+	const ran = {
+		speed: range(.1, .3),
+		delay: range(.1, .3),
+		y: `+=${range(-3, 3)}`,
+		x: `+=${range(-3, 3)}`,
+
+	}
+
+	const obj = {
+		y:"+=1", 
+		x:"-=2", 
+		scale:"+=.0", 
+		yoyo:true, 
+		repeat:5, 
+		repeatDelay:ran.delay
+	}
+
+	tl_move.to( b, .05, {...obj}, 'y')
+	tl_move.to( a, .05, {...obj}, "y")
+	
 }
 
 function start(){
@@ -29,23 +57,31 @@ function start(){
 	tl.from(".txt", .5, {opacity:0}, 'mask')
 
 	tl.from('.top_1', 1, {opacity:0, clip:`rect(100px 300px 100px 0px)`, ease:Power2.easeInOut}, 'mask')
+	tl.from('.top.dots', 1.3, {opacity:0, clip:`rect(100px 300px 100px 0px)`, ease:Power2.easeInOut}, 'mask')
 	
-	tl.from('.right_1', 1.5, {clip:`rect(0px 150px 600px 150px)`, ease:Power2.easeOut}, 'mask')
-	tl.from('.right_2', 1.3, {clip:`rect(0px 150px 600px 150px)`, ease:Power3.easeInOut}, 'mask')
-	tl.from('.right_3', 1.5, {clip:`rect(0px 150px 600px 150px)`, ease:Back.easeOut}, 'mask')
-	tl.from('.right_4', 1.5, {clip:`rect(0px 150px 600px 150px)`, ease:Power2.easeInOut}, 'mask')
+	// tl.from('.right_1', 1.5, {clip:`rect(0px 150px 600px 150px)`, ease:Power2.easeOut}, 'mask')
+	tl.from('.right_a', 1.3, {clip:`rect(0px 150px 600px 150px)`, ease:Power3.easeInOut}, 'mask')
+	tl.from('.right_b', 1.5, {clip:`rect(0px 150px 600px 150px)`, ease:Back.easeOut}, 'mask')
+	tl.from('.right_colour', 1, {clip:`rect(0px 150px 600px 150px)`, ease:Power2.easeInOut}, 'mask+=.5')
 
 	
 
 	tl.from('.left_1', 1.4, {clip:`rect(0px 150px 600px 150px)`, ease:Back.easeOut}, 'mask')
+	tl.from('.left_1_tri', 1, {clip:`rect(0px 150px 600px 150px)`, ease:Back.easeOut}, 'mask')
+	tl.from('.dials', 1.2, {clip:`rect(0px 150px 600px 150px)`, ease:Back.easeOut}, 'mask')
+	
 	tl.from('.left_2', .9, {clip:`rect(0px 150px 600px 150px)`, ease:Power2.easeInOut}, 'mask')
 	tl.from('.left_3', 1.2, {clip:`rect(0px 150px 600px 150px)`, ease:Power3.easeOut}, 'mask')
 	tl.from('.left_4', 1.3, {clip:`rect(0px 150px 600px 150px)`, ease:Power4.easeInOut}, 'mask')
 
-	tl.to(".can", .2, {scale:.82, yoyo:true, repeat:1, ease:Back.easeOut}, 'mask-=.5')
+	// tl.to(".can", .2, {scale:.82, yoyo:true, repeat:1, ease:Back.easeOut}, 'mask-=.5')
+	tl.add("f3")
+	tl.set(['.hasColor'], {opacity:0})
 	tl.call(frame3)
 	tl.to(".txt", .3, {opacity:0}, 8)
 	tl.to(".txt2", .3, {opacity:1})
+
+	// tl.gotoAndPlay("f3")
 
 	// tl.to(".txt", .5, {opacity:0}, '+=2')
 	// TweenMax.to(".can", .3, {scale:.9, yoyo:true, repeat:1, ease:Power4.easeOut})

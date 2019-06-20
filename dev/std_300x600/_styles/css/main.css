@@ -231,6 +231,18 @@ sup {
   clip: rect(0px 150px 600px 0px);
 }
 
+.frame3 .txt2 {
+  width: 169px;
+  -webkit-transform: translate(66px, 500px);
+  -ms-transform: translate(66px, 500px);
+  transform: translate(66px, 500px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
 .can_faker {
   display: none;
 }

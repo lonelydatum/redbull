@@ -21,6 +21,10 @@
 
 .frame3 {
 	// opacity: 1;
+	.txt2{
+		width: 169px;
+		@include pos(66, 500);
+	}
 }
 
 .can_faker{
