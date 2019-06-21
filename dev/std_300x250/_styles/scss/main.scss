@@ -1,0 +1,61 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+.frame1, .frame2, .frame3, .frame4 {
+	opacity: 1;
+	
+}
+
+.f1 {
+	@include pos-scale(0, 0, .5);	
+}
+
+.f2 {
+	@include pos-scale(300, 0, .5);	
+}
+
+.f3 {
+	width: 300px;
+	height: 250px;
+	overflow: hidden;
+	@include pos-scale(600, 0, 1);	
+	.cta{
+		width: 132px;
+		@include pos(86, 212);
+	}
+
+	.bar{
+		width:300px;
+		height: 45px;
+		background-color: rgba(0,0,0,.8);
+		@include pos(0, 204);
+	}
+}
+
+.f4 {
+	@include pos-scale(900, 0, .5);	
+
+	.cta{
+		width: 332px;
+		@include pos(130, 210);
+	}
+}
+
+.can{
+	@include pos(0, -180);
+}
+
+
+
+
+
+#banner{
+	font-size: 20px;
+	color: #333;
+	width: 300px;
+	height: 250px;
+}
+
