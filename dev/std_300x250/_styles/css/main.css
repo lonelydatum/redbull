@@ -220,9 +220,9 @@ sup {
 }
 
 .f1 {
-  -webkit-transform: translate(0px, 0px) scale(0.5, 0.5);
-  -ms-transform: translate(0px, 0px) scale(0.5, 0.5);
-  transform: translate(0px, 0px) scale(0.5, 0.5);
+  -webkit-transform: translate(0px, 0px) scale(1, 1);
+  -ms-transform: translate(0px, 0px) scale(1, 1);
+  transform: translate(0px, 0px) scale(1, 1);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
@@ -292,11 +292,23 @@ sup {
   position: absolute;
 }
 
+.f4 .logo {
+  width: 475px;
+  -webkit-transform: translate(62px, 10px);
+  -ms-transform: translate(62px, 10px);
+  transform: translate(62px, 10px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
 .f4 .cta {
-  width: 332px;
-  -webkit-transform: translate(130px, 210px);
-  -ms-transform: translate(130px, 210px);
-  transform: translate(130px, 210px);
+  width: 272px;
+  -webkit-transform: translate(162px, 360px);
+  -ms-transform: translate(162px, 360px);
+  transform: translate(162px, 360px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;

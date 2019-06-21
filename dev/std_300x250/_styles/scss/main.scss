@@ -10,7 +10,7 @@
 }
 
 .f1 {
-	@include pos-scale(0, 0, .5);	
+	@include pos-scale(0, 0, 1);	
 }
 
 .f2 {
@@ -38,9 +38,15 @@
 .f4 {
 	@include pos-scale(900, 0, .5);	
 
+	
+	.logo{
+		width: 475px;
+		@include pos(62, 10);
+	}
+
 	.cta{
-		width: 332px;
-		@include pos(130, 210);
+		width: 272px;
+		@include pos(162, 360);
 	}
 }
 
