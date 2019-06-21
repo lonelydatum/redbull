@@ -52,4 +52,8 @@ function flicker({time, repeat, a, b }) {
 
 
 
-export {size, flicker, range}
+const read = {
+	txt: 4
+}
+
+export {size, flicker, range, read}

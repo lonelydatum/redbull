@@ -60,9 +60,14 @@ function flicker(_ref) {
 	tl_move.to(a, .05, _extends({}, obj), "y");
 }
 
+var read = {
+	txt: 4
+};
+
 exports.size = size;
 exports.flicker = flicker;
 exports.range = range;
+exports.read = read;
 
 },{}],2:[function(require,module,exports){
 "use strict";

@@ -74,20 +74,25 @@ exports.read = read;
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
-TweenLite.defaultEase = Power3.easeInOut;
-var tl = new TimelineMax();
-tl.to('.frame1', .5, { x: -300 }, "+=2");
-tl.to('.frame1', .5, { x: -600 }, '+=' + _commonJsCommonJs.read.txt);
-// tl.from('.bar_cta', .7, {y:"+=80"}, "+=.3")
+function start() {
+	TweenLite.defaultEase = Power3.easeInOut;
+	var tl = new TimelineMax();
+	tl.add("do", '+=' + _commonJsCommonJs.read.txt);
+	tl.to('.txt', .5, { y: "+=90" }, "do");
+	tl.from('.cta', .5, { y: "-=90" }, "do");
+	// tl.to('.frame1', .5, {x:-600}, "+=1")
 
-tl.to('.frame1', .5, { x: -900 }, "+=2");
+	// tl.to('.frame1', .5, {x:-900}, "+=2")
 
-(0, _commonJsCommonJs.flicker)({
-	time: .2,
-	repeat: 25,
-	a: ".wave_a",
-	b: ".wave_b"
-});
+	(0, _commonJsCommonJs.flicker)({
+		time: .2,
+		repeat: 25,
+		a: ".wave_a",
+		b: ".wave_b"
+	});
+}
+
+start();
 
 module.exports = {};
 
