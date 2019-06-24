@@ -1,13 +1,16 @@
 import {flicker, range, read} from '../../_common/js/common.js'
 
 
-TweenLite.defaultEase = Power3.easeInOut
+TweenLite.defaultEase = Power2.easeInOut
 const tl = new TimelineMax()
 tl.to('.frame1', .5, {x:-300}, "+=2")
-tl.to('.frame1', .5, {x:-600}, `+=${read.txt}`)
-// tl.from('.bar_cta', .7, {y:"+=80"}, "+=.3")
 
-tl.to('.frame1', .5, {x:-900}, "+=2")
+
+tl.add('end', `+=${read.txt}`)
+tl.to('.txt', .3, {opacity:0}, "end")
+tl.from('.cta', .4, {opacity:0}, "+=.2")
+
+
 
 flicker({
 	time: .2,

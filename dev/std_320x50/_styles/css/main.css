@@ -215,15 +215,25 @@ sup {
   opacity: 0;
 }
 
-.frame1 {
-  opacity: 1;
+.wave {
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: translate(-502px, -5px) scale(0.65, 0.65);
+  -ms-transform: translate(-502px, -5px) scale(0.65, 0.65);
+  transform: translate(-502px, -5px) scale(0.65, 0.65);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
 }
 
 .cta {
   width: 132px;
-  -webkit-transform: translate(138px, 9px);
-  -ms-transform: translate(138px, 9px);
-  transform: translate(138px, 9px);
+  -webkit-transform: translate(156px, 9px);
+  -ms-transform: translate(156px, 9px);
+  transform: translate(156px, 9px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;

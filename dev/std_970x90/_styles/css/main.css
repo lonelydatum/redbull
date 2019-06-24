@@ -215,15 +215,33 @@ sup {
   opacity: 0;
 }
 
-.frame1 {
-  opacity: 1;
-}
-
 .cta {
   width: 152px;
-  -webkit-transform: translate(387px, 30px);
-  -ms-transform: translate(387px, 30px);
-  transform: translate(387px, 30px);
+  -webkit-transform: translate(303px, 28px);
+  -ms-transform: translate(303px, 28px);
+  transform: translate(303px, 28px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.color {
+  -webkit-transform: translate(-150px, 0px);
+  -ms-transform: translate(-150px, 0px);
+  transform: translate(-150px, 0px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.color2 {
+  -webkit-transform: translate(38px, 0px);
+  -ms-transform: translate(38px, 0px);
+  transform: translate(38px, 0px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;

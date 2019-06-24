@@ -3,29 +3,31 @@
 @import '../../../_common/styles/common.scss';
 
 
-
 .frame1, .frame2, .frame3, .frame4 {
-	opacity: 1;
+	opacity: 0;
 	
 }
 
+.frame1{
+	opacity: 1;
+}
+
+
 .f1 {
-	@include pos-scale(0, 0, 1);	
+	opacity: 1;
+	// @include pos-scale(0, 0, 1);	
 }
 
 .f2 {
-	@include pos-scale(300, 0, .5);	
+	@include pos-scale(300, 0, 1);	
 }
 
 .f3 {
 	width: 300px;
 	height: 250px;
 	overflow: hidden;
-	@include pos-scale(600, 0, 1);	
-	.cta{
-		width: 132px;
-		@include pos(86, 212);
-	}
+	// @include pos-scale(600, 0, 1);	
+	
 
 	.bar{
 		width:300px;
@@ -44,10 +46,12 @@
 		@include pos(62, 10);
 	}
 
-	.cta{
-		width: 272px;
-		@include pos(162, 360);
-	}
+	
+}
+
+.cta{
+	width: 192px;
+	@include pos(56, 152);
 }
 
 .can{

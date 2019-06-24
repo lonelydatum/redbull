@@ -70,14 +70,15 @@ exports.range = range;
 exports.read = read;
 
 },{}],2:[function(require,module,exports){
-'use strict';
+"use strict";
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
 function start() {
 	TweenLite.defaultEase = Power3.easeInOut;
 	var tl = new TimelineMax();
-	tl.add("do", '+=' + _commonJsCommonJs.read.txt);
+	tl.set(".frame1", { opacity: 1 });
+	tl.add("do", "+=" + _commonJsCommonJs.read.txt);
 	tl.to('.txt', .5, { y: "+=90" }, "do");
 	tl.from('.cta', .5, { y: "-=90" }, "do");
 	// tl.to('.frame1', .5, {x:-600}, "+=1")

@@ -78,7 +78,7 @@ function start() {
 	var tl = new TimelineMax();
 	TweenMax.set(".txt2", { opacity: 0 });
 	tl.set(".frame1", { opacity: 1 });
-	tl.to(".logo", .3, { opacity: 0 }, "+=2");
+	tl.to(".logo", .3, { opacity: 0 }, "+=1.3");
 	tl.set(".frame2", { opacity: 1 });
 
 	tl.add('mask', "+=.2");

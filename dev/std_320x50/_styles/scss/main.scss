@@ -3,12 +3,17 @@
 @import '../../../_common/styles/common.scss';
 
 .frame1{
-	opacity:1;
+	// opacity:1;
+}
+
+.wave {
+	transform-origin: 0 0;
+	@include pos-scale(-502, -5, 0.65);
 }
 
 .cta{
 	width: 132px;
-	@include pos(138, 9);
+	@include pos(156, 9);
 }
 
 
