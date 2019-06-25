@@ -293,17 +293,6 @@ sup {
   position: absolute;
 }
 
-.can {
-  -webkit-transform: translate(0px, -180px);
-  -ms-transform: translate(0px, -180px);
-  transform: translate(0px, -180px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
 #banner {
   font-size: 20px;
   color: #333;
