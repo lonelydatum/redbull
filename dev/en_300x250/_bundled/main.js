@@ -58,6 +58,12 @@ function flicker(_ref) {
 
 	tl_move.to(b, .05, _extends({}, obj), 'y');
 	tl_move.to(a, .05, _extends({}, obj), "y");
+
+	setTimeout(function () {
+		console.log('sldkfjsdklfj');
+		tl.pause();
+		tl_move.pause();
+	}, 11000);
 }
 
 var read = {
@@ -74,25 +80,20 @@ exports.read = read;
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
-function start() {
-	TweenLite.defaultEase = Power3.easeInOut;
-	var tl = new TimelineMax();
-	tl.add("do", '+=' + _commonJsCommonJs.read.txt);
-	tl.to('.txt', .5, { y: "+=250" }, "do");
-	tl.from('.cta', .5, { y: "-=250" }, "do");
-	// tl.to('.frame1', .5, {x:-600}, "+=1")
+TweenLite.defaultEase = Power2.easeInOut;
+var tl = new TimelineMax();
+tl.to('.frame1', .5, { x: -300 }, "+=2");
 
-	// tl.to('.frame1', .5, {x:-900}, "+=2")
+tl.add('end', '+=' + _commonJsCommonJs.read.txt);
+tl.to('.txt', .3, { opacity: 0 }, "end");
+tl.from('.cta', .4, { opacity: 0 }, "+=.2");
 
-	(0, _commonJsCommonJs.flicker)({
-		time: .2,
-		repeat: 25,
-		a: ".wave_a",
-		b: ".wave_b"
-	});
-}
-
-start();
+(0, _commonJsCommonJs.flicker)({
+	time: .2,
+	repeat: 25,
+	a: ".wave_a",
+	b: ".wave_b"
+});
 
 module.exports = {};
 

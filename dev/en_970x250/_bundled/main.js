@@ -58,6 +58,12 @@ function flicker(_ref) {
 
 	tl_move.to(b, .05, _extends({}, obj), 'y');
 	tl_move.to(a, .05, _extends({}, obj), "y");
+
+	setTimeout(function () {
+		console.log('sldkfjsdklfj');
+		tl.pause();
+		tl_move.pause();
+	}, 11000);
 }
 
 var read = {
@@ -70,17 +76,16 @@ exports.range = range;
 exports.read = read;
 
 },{}],2:[function(require,module,exports){
-"use strict";
+'use strict';
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
 function start() {
 	TweenLite.defaultEase = Power3.easeInOut;
 	var tl = new TimelineMax();
-	tl.set(".frame1", { opacity: 1 });
-	tl.add("do", "+=" + _commonJsCommonJs.read.txt);
-	tl.to('.txt', .5, { y: "+=90" }, "do");
-	tl.from('.cta', .5, { y: "-=90" }, "do");
+	tl.add("do", '+=' + _commonJsCommonJs.read.txt);
+	tl.to('.txt', .5, { y: "+=250" }, "do");
+	tl.from('.cta', .5, { y: "-=250" }, "do");
 	// tl.to('.frame1', .5, {x:-600}, "+=1")
 
 	// tl.to('.frame1', .5, {x:-900}, "+=2")

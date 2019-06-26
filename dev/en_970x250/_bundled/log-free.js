@@ -58,6 +58,12 @@ function flicker(_ref) {
 
 	tl_move.to(b, .05, _extends({}, obj), 'y');
 	tl_move.to(a, .05, _extends({}, obj), "y");
+
+	setTimeout(function () {
+		void 0;
+		tl.pause();
+		tl_move.pause();
+	}, 11000);
 }
 
 var read = {

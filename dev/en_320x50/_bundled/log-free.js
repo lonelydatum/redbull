@@ -58,6 +58,12 @@ function flicker(_ref) {
 
 	tl_move.to(b, .05, _extends({}, obj), 'y');
 	tl_move.to(a, .05, _extends({}, obj), "y");
+
+	setTimeout(function () {
+		void 0;
+		tl.pause();
+		tl_move.pause();
+	}, 11000);
 }
 
 var read = {
@@ -79,15 +85,15 @@ function start() {
 	var tl = new TimelineMax();
 	tl.set(".frame1", { opacity: 1 });
 	tl.add("do", "+=" + _commonJsCommonJs.read.txt);
-	tl.to('.txt', .5, { y: "+=90" }, "do");
-	tl.from('.cta', .5, { y: "-=90" }, "do");
+	tl.to('.txt', .5, { y: "+=50" }, "do");
+	tl.from('.cta', .5, { y: "-=50" }, "do");
 	// tl.to('.frame1', .5, {x:-600}, "+=1")
 
 	// tl.to('.frame1', .5, {x:-900}, "+=2")
 
 	(0, _commonJsCommonJs.flicker)({
 		time: .2,
-		repeat: 25,
+		repeat: 12,
 		a: ".wave_a",
 		b: ".wave_b"
 	});
