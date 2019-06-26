@@ -47,6 +47,13 @@ function flicker({time, repeat, a, b }) {
 
 	tl_move.to( b, .05, {...obj}, 'y')
 	tl_move.to( a, .05, {...obj}, "y")
+
+
+	setTimeout(()=>{
+		console.log('sldkfjsdklfj');
+		tl.pause()
+		tl_move.pause()
+	}, 11000)
 	
 }
 
