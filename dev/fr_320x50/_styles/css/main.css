@@ -231,9 +231,9 @@ sup {
 
 .cta {
   width: 132px;
-  -webkit-transform: translate(156px, 9px);
-  -ms-transform: translate(156px, 9px);
-  transform: translate(156px, 9px);
+  -webkit-transform: translate(156px, 11px);
+  -ms-transform: translate(156px, 11px);
+  transform: translate(156px, 11px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
