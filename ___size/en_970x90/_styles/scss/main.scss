@@ -1,0 +1,29 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+.frame1{
+	// opacity:1;
+}
+
+.cta{
+	width: 152px;
+	@include pos(303, 28);
+}
+
+.color{
+	@include pos(-150, 0);
+}
+
+.color2{
+	@include pos(38, 0);
+}
+
+
+#banner{
+	font-size: 20px;
+	color: #333;
+	width: 970px;
+	height: 90px;
+}
+
